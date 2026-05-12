@@ -66,14 +66,10 @@ a {
   font-weight: 800;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: var(--green);
-  color: #ffffff;
+.brand-logo {
+  display: block;
+  width: 148px;
+  height: auto;
 }
 
 .main-nav,
@@ -688,6 +684,17 @@ h3 {
 .site-footer span {
   color: var(--ink);
   font-weight: 900;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo {
+  display: block;
+  width: 118px;
+  height: auto;
 }
 
 .modal {
