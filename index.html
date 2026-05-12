@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillBridge | Freelance Marketplace</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="SkillBridge home">
+        <span class="brand-mark">S</span>
+        <span>SkillBridge</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#categories">Categories</a>
+        <a href="#talent">Talent</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#how">How it works</a>
+      </nav>
+      <div class="header-actions">
+        <button class="ghost-btn" data-open-modal="loginModal">Log in</button>
+        <button class="solid-btn" data-open-modal="postJobModal">Post a job</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Freelancers for modern teams</p>
+          <h1 id="hero-title">Hire developers, editors, creators, and operators in minutes.</h1>
+          <p class="hero-text">
+            SkillBridge connects job givers with verified specialists for websites, videos,
+            content, design, marketing, automation, and ongoing business support.
+          </p>
+          <form class="search-panel" id="searchForm" aria-label="Search services">
+            <label class="search-label" for="serviceSearch">What do you need done?</label>
+            <div class="search-row">
+              <input
+                id="serviceSearch"
+                type="search"
+                placeholder="Try: React developer, video editor, logo designer"
+                autocomplete="off"
+              />
+              <button class="solid-btn" type="submit">Search</button>
+            </div>
+          </form>
+          <div class="popular-tags" aria-label="Popular searches">
+            <button data-search="website developer">Website developer</button>
+            <button data-search="video editor">Video editor</button>
+            <button data-search="content writer">Content writer</button>
+            <button data-search="social media">Social media</button>
+          </div>
+        </div>
+        <div class="hero-media" aria-label="Freelance professionals collaborating">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1100&q=80"
+            alt="A team reviewing creative work on a laptop"
+          />
+          <div class="hero-stat hero-stat-top">
+            <strong>48K+</strong>
+            <span>ready freelancers</span>
+          </div>
+          <div class="hero-stat hero-stat-bottom">
+            <strong>4.9/5</strong>
+            <span>average rating</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-bar" aria-label="Marketplace highlights">
+        <span>Verified profiles</span>
+        <span>Secure payments</span>
+        <span>Milestone delivery</span>
+        <span>Global talent</span>
+      </section>
+
+      <section class="section-shell" id="categories" aria-labelledby="categories-title">
+        <div class="section-heading">
+          <p class="eyebrow">Explore services</p>
+          <h2 id="categories-title">Find experts by category</h2>
+        </div>
+        <div class="category-grid">
+          <button class="category-card active" data-category="All">
+            <span class="category-icon">⌘</span>
+            <strong>All Services</strong>
+            <small>Every expert</small>
+          </button>
+          <button class="category-card" data-category="Development">
+            <span class="category-icon">&lt;/&gt;</span>
+            <strong>Development</strong>
+            <small>Web, apps, AI</small>
+          </button>
+          <button class="category-card" data-category="Video">
+            <span class="category-icon">▶</span>
+            <strong>Video Editing</strong>
+            <small>Reels, ads, YouTube</small>
+          </button>
+          <button class="category-card" data-category="Writing">
+            <span class="category-icon">Aa</span>
+            <strong>Writing</strong>
+            <small>Blogs, copy, scripts</small>
+          </button>
+          <button class="category-card" data-category="Design">
+            <span class="category-icon">◆</span>
+            <strong>Design</strong>
+            <small>Branding, UI, logos</small>
+          </button>
+          <button class="category-card" data-category="Marketing">
+            <span class="category-icon">↗</span>
+            <strong>Marketing</strong>
+            <small>SEO, ads, social</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="market-section" id="talent" aria-labelledby="talent-title">
+        <div class="section-shell">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Top services</p>
+              <h2 id="talent-title">Popular freelance gigs</h2>
+            </div>
+            <div class="filter-actions" aria-label="Gig filters">
+              <button class="filter-btn active" data-sort="recommended">Recommended</button>
+              <button class="filter-btn" data-sort="price">Lowest price</button>
+              <button class="filter-btn" data-sort="rating">Top rated</button>
+            </div>
+          </div>
+          <div class="gig-grid" id="gigGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section-shell two-column" id="jobs" aria-labelledby="jobs-title">
+        <div class="job-panel">
+          <p class="eyebrow">For job givers</p>
+          <h2 id="jobs-title">Post work and let freelancers come to you.</h2>
+          <p>
+            Share your deadline, budget, and project goals. SkillBridge matches your request with
+            specialists who can send custom offers.
+          </p>
+          <button class="solid-btn" data-open-modal="postJobModal">Create job request</button>
+        </div>
+        <div class="job-list" aria-label="Live job requests">
+          <article>
+            <span class="job-type">Fixed price</span>
+            <h3>Build a booking website for a local salon</h3>
+            <p>$450 budget · 10 proposals · Web development</p>
+          </article>
+          <article>
+            <span class="job-type">Urgent</span>
+            <h3>Edit 20 short videos for Instagram ads</h3>
+            <p>$180 budget · 24 hour delivery · Video editing</p>
+          </article>
+          <article>
+            <span class="job-type">Monthly</span>
+            <h3>Write SEO content for a finance blog</h3>
+            <p>$700/month · 8 articles · Content creation</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell how-section" id="how" aria-labelledby="how-title">
+        <div class="section-heading">
+          <p class="eyebrow">Simple workflow</p>
+          <h2 id="how-title">How SkillBridge works</h2>
+        </div>
+        <div class="steps-grid">
+          <article>
+            <span>1</span>
+            <h3>Search or post</h3>
+            <p>Browse services directly or publish a request for freelancers to bid on.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Compare talent</h3>
+            <p>Review portfolios, prices, ratings, delivery speed, and verified skills.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Work safely</h3>
+            <p>Use milestones, chat, file handoff, and payment protection until delivery.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-title">
+        <div>
+          <p class="eyebrow">Ready when you are</p>
+          <h2 id="cta-title">Start with a search, a job post, or your freelancer profile.</h2>
+        </div>
+        <div class="cta-actions">
+          <button class="light-btn" data-open-modal="postJobModal">Hire talent</button>
+          <button class="outline-light-btn" data-open-modal="freelancerModal">Become a freelancer</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>SkillBridge</span>
+      <a href="#categories">Categories</a>
+      <a href="#talent">Talent</a>
+      <a href="#jobs">Post a job</a>
+      <a href="#how">How it works</a>
+    </footer>
+
+    <dialog class="modal" id="postJobModal">
+      <form method="dialog" class="modal-card">
+        <button class="modal-close" aria-label="Close dialog">×</button>
+        <h2>Post a job request</h2>
+        <label>
+          Project title
+          <input type="text" placeholder="Example: Build a Shopify store" />
+        </label>
+        <label>
+          Category
+          <select>
+            <option>Development</option>
+            <option>Video Editing</option>
+            <option>Content Creation</option>
+            <option>Design</option>
+            <option>Marketing</option>
+          </select>
+        </label>
+        <label>
+          Budget
+          <input type="text" placeholder="$250 - $500" />
+        </label>
+        <label>
+          Project brief
+          <textarea placeholder="Describe the outcome, deadline, and files needed."></textarea>
+        </label>
+        <button class="solid-btn" value="submit">Submit request</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="freelancerModal">
+      <form method="dialog" class="modal-card">
+        <button class="modal-close" aria-label="Close dialog">×</button>
+        <h2>Create freelancer profile</h2>
+        <label>
+          Full name
+          <input type="text" placeholder="Your name" />
+        </label>
+        <label>
+          Main skill
+          <input type="text" placeholder="Example: Full-stack developer" />
+        </label>
+        <label>
+          Starting price
+          <input type="text" placeholder="$99" />
+        </label>
+        <button class="solid-btn" value="submit">Join SkillBridge</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="loginModal">
+      <form method="dialog" class="modal-card compact-modal">
+        <button class="modal-close" aria-label="Close dialog">×</button>
+        <h2>Welcome back</h2>
+        <label>
+          Email
+          <input type="email" placeholder="you@example.com" />
+        </label>
+        <label>
+          Password
+          <input type="password" placeholder="••••••••" />
+        </label>
+        <button class="solid-btn" value="submit">Log in</button>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
