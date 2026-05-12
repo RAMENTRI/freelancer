@@ -80,11 +80,17 @@ a {
 .header-actions,
 .popular-tags,
 .filter-actions,
+.choice-actions,
 .cta-actions,
 .site-footer {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.header-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .main-nav {
@@ -125,6 +131,15 @@ a {
 .ghost-btn {
   background: transparent;
   color: var(--ink);
+}
+
+.header-actions .ghost-btn {
+  border: 1px solid transparent;
+}
+
+.header-actions .ghost-btn:hover {
+  border-color: var(--line);
+  background: #ffffff;
 }
 
 .light-btn {
@@ -317,6 +332,61 @@ h3 {
   margin-bottom: 26px;
 }
 
+.auth-section {
+  padding-top: 36px;
+}
+
+.auth-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.auth-choice {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  min-height: 250px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 30px);
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(20, 33, 61, 0.06);
+}
+
+.auth-choice p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.choice-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: #e8f8ef;
+  color: var(--green-dark);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.choice-icon.employer {
+  background: #eaf0ff;
+  color: var(--navy);
+}
+
+.choice-actions {
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.choice-actions button {
+  flex: 1;
+  min-width: 180px;
+}
+
 .split-heading {
   display: flex;
   justify-content: space-between;
@@ -421,11 +491,20 @@ h3 {
   align-items: center;
 }
 
-.seller {
+.seller,
+.service-provider {
   display: flex;
   gap: 10px;
-  align-items: center;
   min-width: 0;
+}
+
+.seller {
+  align-items: center;
+}
+
+.service-provider {
+  flex-direction: column;
+  gap: 3px;
 }
 
 .avatar {
@@ -440,7 +519,8 @@ h3 {
   font-weight: 850;
 }
 
-.seller span {
+.seller span,
+.service-provider span {
   display: block;
   color: var(--muted);
   font-size: 0.82rem;
@@ -706,6 +786,7 @@ h3 {
 
   .search-row,
   .trust-bar,
+  .auth-choice-grid,
   .category-grid,
   .gig-grid,
   .steps-grid {

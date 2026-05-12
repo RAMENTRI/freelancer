@@ -3,24 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkillBridge | Freelance Marketplace</title>
+    <title>SkillBridge India | Freelance Jobs Marketplace</title>
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#" aria-label="SkillBridge home">
+      <a class="brand" href="#" aria-label="SkillBridge India home">
         <span class="brand-mark">S</span>
-        <span>SkillBridge</span>
+        <span>SkillBridge India</span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#categories">Categories</a>
-        <a href="#talent">Talent</a>
+        <a href="#talent">Freelancers</a>
         <a href="#jobs">Jobs</a>
         <a href="#how">How it works</a>
       </nav>
       <div class="header-actions">
-        <button class="ghost-btn" data-open-modal="loginModal">Log in</button>
+        <button class="ghost-btn" data-open-modal="freelancerLoginModal">Freelancer login</button>
+        <button class="ghost-btn" data-open-modal="employerLoginModal">Employer login</button>
         <button class="solid-btn" data-open-modal="postJobModal">Post a job</button>
       </div>
     </header>
@@ -28,19 +29,19 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Freelancers for modern teams</p>
-          <h1 id="hero-title">Hire developers, editors, creators, and operators in minutes.</h1>
+          <p class="eyebrow">Freelance work across India</p>
+          <h1 id="hero-title">Hire Indian developers, editors, designers, and creators faster.</h1>
           <p class="hero-text">
-            SkillBridge connects job givers with verified specialists for websites, videos,
-            content, design, marketing, automation, and ongoing business support.
+            SkillBridge India helps employers find trusted freelance talent and helps skilled
+            professionals win real project work in INR, from one-time tasks to monthly contracts.
           </p>
           <form class="search-panel" id="searchForm" aria-label="Search services">
-            <label class="search-label" for="serviceSearch">What do you need done?</label>
+            <label class="search-label" for="serviceSearch">Search for a skill or service</label>
             <div class="search-row">
               <input
                 id="serviceSearch"
                 type="search"
-                placeholder="Try: React developer, video editor, logo designer"
+                placeholder="Try: React developer, video editor, Hindi content writer"
                 autocomplete="off"
               />
               <button class="solid-btn" type="submit">Search</button>
@@ -50,42 +51,69 @@
             <button data-search="website developer">Website developer</button>
             <button data-search="video editor">Video editor</button>
             <button data-search="content writer">Content writer</button>
-            <button data-search="social media">Social media</button>
+            <button data-search="digital marketing">Digital marketing</button>
           </div>
         </div>
-        <div class="hero-media" aria-label="Freelance professionals collaborating">
+        <div class="hero-media" aria-label="Indian freelance team collaborating">
           <img
             src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1100&q=80"
-            alt="A team reviewing creative work on a laptop"
+            alt="Professionals reviewing project work on a laptop"
           />
           <div class="hero-stat hero-stat-top">
-            <strong>48K+</strong>
-            <span>ready freelancers</span>
+            <strong>India-first</strong>
+            <span>INR budgets and local hiring needs</span>
           </div>
           <div class="hero-stat hero-stat-bottom">
-            <strong>4.9/5</strong>
-            <span>average rating</span>
+            <strong>2 ways in</strong>
+            <span>Freelancer and employer accounts</span>
           </div>
         </div>
       </section>
 
       <section class="trust-bar" aria-label="Marketplace highlights">
-        <span>Verified profiles</span>
-        <span>Secure payments</span>
-        <span>Milestone delivery</span>
-        <span>Global talent</span>
+        <span>Indian payments</span>
+        <span>Verified work samples</span>
+        <span>Fixed and monthly jobs</span>
+        <span>Remote and local work</span>
+      </section>
+
+      <section class="section-shell auth-section" aria-labelledby="auth-title">
+        <div class="section-heading">
+          <p class="eyebrow">Choose your account</p>
+          <h2 id="auth-title">Sign in or create the right account for your work.</h2>
+        </div>
+        <div class="auth-choice-grid">
+          <article class="auth-choice">
+            <span class="choice-icon">FR</span>
+            <h3>Freelancer</h3>
+            <p>Find paid projects, list your skills, manage proposals, and get hired by Indian businesses.</p>
+            <div class="choice-actions">
+              <button class="solid-btn" data-open-modal="freelancerLoginModal">Freelancer login</button>
+              <button class="mini-btn" data-open-modal="freelancerSignupModal">Sign up</button>
+            </div>
+          </article>
+          <article class="auth-choice">
+            <span class="choice-icon employer">EM</span>
+            <h3>Employer</h3>
+            <p>Post jobs, compare offers, shortlist talent, and manage freelance work for your company.</p>
+            <div class="choice-actions">
+              <button class="solid-btn" data-open-modal="employerLoginModal">Employer login</button>
+              <button class="mini-btn" data-open-modal="employerSignupModal">Sign up</button>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="section-shell" id="categories" aria-labelledby="categories-title">
         <div class="section-heading">
           <p class="eyebrow">Explore services</p>
-          <h2 id="categories-title">Find experts by category</h2>
+          <h2 id="categories-title">Find Indian freelancers by category</h2>
         </div>
         <div class="category-grid">
           <button class="category-card active" data-category="All">
-            <span class="category-icon">⌘</span>
+            <span class="category-icon">All</span>
             <strong>All Services</strong>
-            <small>Every expert</small>
+            <small>Every skill</small>
           </button>
           <button class="category-card" data-category="Development">
             <span class="category-icon">&lt;/&gt;</span>
@@ -93,22 +121,22 @@
             <small>Web, apps, AI</small>
           </button>
           <button class="category-card" data-category="Video">
-            <span class="category-icon">▶</span>
+            <span class="category-icon">Play</span>
             <strong>Video Editing</strong>
             <small>Reels, ads, YouTube</small>
           </button>
           <button class="category-card" data-category="Writing">
             <span class="category-icon">Aa</span>
             <strong>Writing</strong>
-            <small>Blogs, copy, scripts</small>
+            <small>English, Hindi, regional</small>
           </button>
           <button class="category-card" data-category="Design">
-            <span class="category-icon">◆</span>
+            <span class="category-icon">UI</span>
             <strong>Design</strong>
             <small>Branding, UI, logos</small>
           </button>
           <button class="category-card" data-category="Marketing">
-            <span class="category-icon">↗</span>
+            <span class="category-icon">SEO</span>
             <strong>Marketing</strong>
             <small>SEO, ads, social</small>
           </button>
@@ -119,13 +147,13 @@
         <div class="section-shell">
           <div class="section-heading split-heading">
             <div>
-              <p class="eyebrow">Top services</p>
-              <h2 id="talent-title">Popular freelance gigs</h2>
+              <p class="eyebrow">Ready to hire</p>
+              <h2 id="talent-title">Popular service packages</h2>
             </div>
-            <div class="filter-actions" aria-label="Gig filters">
+            <div class="filter-actions" aria-label="Service filters">
               <button class="filter-btn active" data-sort="recommended">Recommended</button>
-              <button class="filter-btn" data-sort="price">Lowest price</button>
-              <button class="filter-btn" data-sort="rating">Top rated</button>
+              <button class="filter-btn" data-sort="price">Lowest budget</button>
+              <button class="filter-btn" data-sort="rating">Best rated</button>
             </div>
           </div>
           <div class="gig-grid" id="gigGrid" aria-live="polite"></div>
@@ -134,29 +162,29 @@
 
       <section class="section-shell two-column" id="jobs" aria-labelledby="jobs-title">
         <div class="job-panel">
-          <p class="eyebrow">For job givers</p>
-          <h2 id="jobs-title">Post work and let freelancers come to you.</h2>
+          <p class="eyebrow">For Indian employers</p>
+          <h2 id="jobs-title">Post a job and receive proposals from skilled freelancers.</h2>
           <p>
-            Share your deadline, budget, and project goals. SkillBridge matches your request with
-            specialists who can send custom offers.
+            Add your budget, timeline, city or remote preference, and project details. Freelancers
+            can send custom proposals with pricing in INR.
           </p>
           <button class="solid-btn" data-open-modal="postJobModal">Create job request</button>
         </div>
-        <div class="job-list" aria-label="Live job requests">
+        <div class="job-list" aria-label="Example job requests">
           <article>
             <span class="job-type">Fixed price</span>
-            <h3>Build a booking website for a local salon</h3>
-            <p>$450 budget · 10 proposals · Web development</p>
+            <h3>Build a booking website for a salon in Kochi</h3>
+            <p>INR 38,000 budget | 10 proposals | Web development</p>
           </article>
           <article>
             <span class="job-type">Urgent</span>
             <h3>Edit 20 short videos for Instagram ads</h3>
-            <p>$180 budget · 24 hour delivery · Video editing</p>
+            <p>INR 15,000 budget | 24 hour delivery | Video editing</p>
           </article>
           <article>
             <span class="job-type">Monthly</span>
             <h3>Write SEO content for a finance blog</h3>
-            <p>$700/month · 8 articles · Content creation</p>
+            <p>INR 58,000/month | 8 articles | Content creation</p>
           </article>
         </div>
       </section>
@@ -164,54 +192,54 @@
       <section class="section-shell how-section" id="how" aria-labelledby="how-title">
         <div class="section-heading">
           <p class="eyebrow">Simple workflow</p>
-          <h2 id="how-title">How SkillBridge works</h2>
+          <h2 id="how-title">How SkillBridge India works</h2>
         </div>
         <div class="steps-grid">
           <article>
             <span>1</span>
             <h3>Search or post</h3>
-            <p>Browse services directly or publish a request for freelancers to bid on.</p>
+            <p>Employers post jobs or search services. Freelancers create profiles and apply.</p>
           </article>
           <article>
             <span>2</span>
-            <h3>Compare talent</h3>
-            <p>Review portfolios, prices, ratings, delivery speed, and verified skills.</p>
+            <h3>Compare proposals</h3>
+            <p>Review portfolios, INR pricing, ratings, city, language, and delivery timelines.</p>
           </article>
           <article>
             <span>3</span>
-            <h3>Work safely</h3>
-            <p>Use milestones, chat, file handoff, and payment protection until delivery.</p>
+            <h3>Start work</h3>
+            <p>Agree milestones, share files, chat clearly, and complete projects with payment records.</p>
           </article>
         </div>
       </section>
 
       <section class="cta-band" aria-labelledby="cta-title">
         <div>
-          <p class="eyebrow">Ready when you are</p>
-          <h2 id="cta-title">Start with a search, a job post, or your freelancer profile.</h2>
+          <p class="eyebrow">Build with Indian talent</p>
+          <h2 id="cta-title">Create an account as a freelancer or employer and start today.</h2>
         </div>
         <div class="cta-actions">
-          <button class="light-btn" data-open-modal="postJobModal">Hire talent</button>
-          <button class="outline-light-btn" data-open-modal="freelancerModal">Become a freelancer</button>
+          <button class="light-btn" data-open-modal="employerSignupModal">I want to hire</button>
+          <button class="outline-light-btn" data-open-modal="freelancerSignupModal">I want freelance work</button>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>SkillBridge</span>
+      <span>SkillBridge India</span>
       <a href="#categories">Categories</a>
-      <a href="#talent">Talent</a>
+      <a href="#talent">Freelancers</a>
       <a href="#jobs">Post a job</a>
       <a href="#how">How it works</a>
     </footer>
 
     <dialog class="modal" id="postJobModal">
       <form method="dialog" class="modal-card">
-        <button class="modal-close" aria-label="Close dialog">×</button>
+        <button class="modal-close" aria-label="Close dialog">x</button>
         <h2>Post a job request</h2>
         <label>
           Project title
-          <input type="text" placeholder="Example: Build a Shopify store" />
+          <input type="text" placeholder="Example: Build a Shopify store for my brand" />
         </label>
         <label>
           Category
@@ -224,50 +252,105 @@
           </select>
         </label>
         <label>
-          Budget
-          <input type="text" placeholder="$250 - $500" />
+          Budget in INR
+          <input type="text" placeholder="INR 20,000 - INR 50,000" />
+        </label>
+        <label>
+          Location preference
+          <select>
+            <option>Remote across India</option>
+            <option>Bengaluru</option>
+            <option>Chennai</option>
+            <option>Delhi NCR</option>
+            <option>Hyderabad</option>
+            <option>Kochi</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+          </select>
         </label>
         <label>
           Project brief
-          <textarea placeholder="Describe the outcome, deadline, and files needed."></textarea>
+          <textarea placeholder="Describe the outcome, deadline, files needed, and preferred language."></textarea>
         </label>
-        <button class="solid-btn" value="submit">Submit request</button>
+        <button class="solid-btn" value="submit">Submit job request</button>
       </form>
     </dialog>
 
-    <dialog class="modal" id="freelancerModal">
+    <dialog class="modal" id="freelancerSignupModal">
       <form method="dialog" class="modal-card">
-        <button class="modal-close" aria-label="Close dialog">×</button>
-        <h2>Create freelancer profile</h2>
+        <button class="modal-close" aria-label="Close dialog">x</button>
+        <h2>Freelancer sign up</h2>
         <label>
           Full name
-          <input type="text" placeholder="Your name" />
+          <input type="text" placeholder="Your full name" />
         </label>
         <label>
           Main skill
-          <input type="text" placeholder="Example: Full-stack developer" />
+          <input type="text" placeholder="Example: MERN stack developer" />
         </label>
         <label>
-          Starting price
-          <input type="text" placeholder="$99" />
+          City
+          <input type="text" placeholder="Example: Kochi" />
         </label>
-        <button class="solid-btn" value="submit">Join SkillBridge</button>
+        <label>
+          Minimum project budget
+          <input type="text" placeholder="INR 10,000" />
+        </label>
+        <button class="solid-btn" value="submit">Create freelancer account</button>
       </form>
     </dialog>
 
-    <dialog class="modal" id="loginModal">
-      <form method="dialog" class="modal-card compact-modal">
-        <button class="modal-close" aria-label="Close dialog">×</button>
-        <h2>Welcome back</h2>
+    <dialog class="modal" id="employerSignupModal">
+      <form method="dialog" class="modal-card">
+        <button class="modal-close" aria-label="Close dialog">x</button>
+        <h2>Employer sign up</h2>
         <label>
-          Email
-          <input type="email" placeholder="you@example.com" />
+          Company or client name
+          <input type="text" placeholder="Your business name" />
+        </label>
+        <label>
+          Work email
+          <input type="email" placeholder="name@company.com" />
+        </label>
+        <label>
+          Hiring need
+          <input type="text" placeholder="Example: Need a video editor this week" />
+        </label>
+        <button class="solid-btn" value="submit">Create employer account</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="freelancerLoginModal">
+      <form method="dialog" class="modal-card compact-modal">
+        <button class="modal-close" aria-label="Close dialog">x</button>
+        <h2>Freelancer login</h2>
+        <label>
+          Email or mobile
+          <input type="text" placeholder="Email or Indian mobile number" />
         </label>
         <label>
           Password
-          <input type="password" placeholder="••••••••" />
+          <input type="password" placeholder="Password" />
         </label>
-        <button class="solid-btn" value="submit">Log in</button>
+        <button class="solid-btn" value="submit">Log in as freelancer</button>
+        <button class="mini-btn" type="button" data-switch-modal="freelancerSignupModal">Create freelancer account</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="employerLoginModal">
+      <form method="dialog" class="modal-card compact-modal">
+        <button class="modal-close" aria-label="Close dialog">x</button>
+        <h2>Employer login</h2>
+        <label>
+          Work email or mobile
+          <input type="text" placeholder="Email or Indian mobile number" />
+        </label>
+        <label>
+          Password
+          <input type="password" placeholder="Password" />
+        </label>
+        <button class="solid-btn" value="submit">Log in as employer</button>
+        <button class="mini-btn" type="button" data-switch-modal="employerSignupModal">Create employer account</button>
       </form>
     </dialog>
 
